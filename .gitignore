@@ -1,0 +1,28 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local API keys (including common filename typos)
+.env
+.env.*
+.evn
+.evn.*
+
+# Local caches and generated lab outputs
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+embedding_cache/
+src/labs/**/plots/
+.coverage
+htmlcov/
