@@ -14,6 +14,7 @@ Provider calls can cost money and send your input to external services.
 | Path | What you will find |
 | --- | --- |
 | [`examples/`](examples/) | Focused, mostly standalone demonstrations; see the complete catalog below. |
+| [`projects/`](projects/README.md) | Standalone, incrementally developed projects with their own documentation and uv-managed Python setup when introduced. |
 | [`src/labs/embedding_explorer/`](src/labs/embedding_explorer/) | A guided comparison of OpenAI and local embeddings, with offline tests. |
 | [`src/ai_service/models.py`](src/ai_service/models.py) | Pydantic v2 request, response, token usage, and discriminated-union models. |
 | [`src/ai_service/__init__.py`](src/ai_service/__init__.py) | Empty package scaffold, not an application entry point. |
@@ -25,6 +26,15 @@ The declared `serve` and `ingest` commands reference `ai_service.main:run` and
 `ai_service.cli:ingest`, but those modules do not exist yet. Use the explicit
 example and lab commands here instead. Packaging/service entry points remain
 scaffolding despite the project metadata's “Production AI microservice” label.
+
+## Projects
+
+### [Semantic Search Engine](projects/semantic-search-engine/)
+
+Learn semantic retrieval with pgvector, sentence-transformers, and FastAPI.
+Currently provides a local PostgreSQL + pgvector Compose setup and initial schema;
+ingestion, API, hybrid search, and evaluation will be added incrementally.
+See the [project index](projects/README.md) for scope and setup links.
 
 ## Quick start: no API key required
 
