@@ -14,7 +14,7 @@ Provider calls can cost money and send your input to external services.
 | Path | What you will find |
 | --- | --- |
 | [`examples/`](examples/) | Focused, mostly standalone demonstrations; see the complete catalog below. |
-| [`projects/`](projects/README.md) | Standalone, incrementally developed projects with their own documentation and uv-managed Python setup when introduced. |
+| [`src/`](src/README.md) | Source modules and independent projects; see the source index for setup and scope. |
 | [`src/labs/embedding_explorer/`](src/labs/embedding_explorer/) | A guided comparison of OpenAI and local embeddings, with offline tests. |
 | [`src/ai_service/models.py`](src/ai_service/models.py) | Pydantic v2 request, response, token usage, and discriminated-union models. |
 | [`src/ai_service/__init__.py`](src/ai_service/__init__.py) | Empty package scaffold, not an application entry point. |
@@ -29,12 +29,14 @@ scaffolding despite the project metadata's “Production AI microservice” labe
 
 ## Projects
 
-### [Semantic Search Engine](projects/semantic-search-engine/)
+### [Semantic Search Engine](src/semantic-search-enine/)
 
 Learn semantic retrieval with pgvector, sentence-transformers, and FastAPI.
-Currently provides a local PostgreSQL + pgvector Compose setup and initial schema;
-ingestion, API, hybrid search, and evaluation will be added incrementally.
-See the [project index](projects/README.md) for scope and setup links.
+Provides PostgreSQL + pgvector and an independent uv-managed ingestion library:
+load complete `.txt`/`.md` documents, generate MiniLM embeddings, and incrementally
+upsert records. The same four-function library runs through a thin CLI, without
+chunking. API, search, and evaluation remain future steps.
+See the [source index](src/README.md) for scope and setup links.
 
 ## Quick start: no API key required
 

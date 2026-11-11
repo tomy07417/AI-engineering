@@ -1,0 +1,21 @@
+[project]
+name = "semantic-search-engine"
+version = "0.1.0"
+description = "Incremental semantic search project with pgvector, local embeddings, and FastAPI"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "asyncpg>=0.32.0",
+    "fastapi>=0.162.4",
+    "numpy>=2.5.4",
+    "pgvector>=0.5.1",
+    "sentence-transformers>=6.2.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
